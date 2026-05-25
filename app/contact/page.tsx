@@ -49,7 +49,7 @@ export default function ContactPage() {
           </div>
           <div className="flex items-center gap-2.5 mt-10 text-xs font-light text-linen-dim">
             <div
-              className="w-1.5 h-1.5 rounded-full bg-sage flex-shrink-0"
+              className="w-1.5 h-1.5 rounded-full bg-sage flex-shrink-0 animate-pulse"
               style={{ boxShadow: '0 0 0 3px rgba(122,170,142,0.2)' }}
               aria-hidden="true"
             />
