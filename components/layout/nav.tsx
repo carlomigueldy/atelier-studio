@@ -29,6 +29,16 @@ export function Nav() {
         ))}
       </ul>
 
+      {/* Mobile navigation trigger — full menu implementation is v2 */}
+      <button
+        className="md:hidden text-linen-dim hover:text-linen transition-colors p-2"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        type="button"
+      >
+        ☰
+      </button>
+
       <Link
         href="/contact"
         className="bg-copper text-bg px-5 py-2.5 text-[12px] font-bold tracking-[1.5px] uppercase rounded-sm hover:opacity-90 transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-border-focus"
