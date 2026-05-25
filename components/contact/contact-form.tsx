@@ -232,7 +232,7 @@ export function ContactForm() {
             <span>{formatBudget(BUDGET_MAX)}+</span>
           </div>
           {errors.budget && (
-            <p className="text-sm text-error">{errors.budget.message}</p>
+            <p role="alert" className="text-sm text-error">{errors.budget.message}</p>
           )}
         </div>
 
@@ -254,7 +254,7 @@ export function ContactForm() {
             ))}
           </select>
           {errors.timeline && (
-            <p className="text-sm text-error">{errors.timeline.message}</p>
+            <p role="alert" className="text-sm text-error">{errors.timeline.message}</p>
           )}
         </div>
 
