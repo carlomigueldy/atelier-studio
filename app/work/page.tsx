@@ -74,7 +74,7 @@ export default function WorkPage() {
   const visible = active === 'All' ? CASES : CASES.filter((c) => c.category === active)
 
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       {/* Header */}
       <section className="px-6 md:px-16 lg:px-24 pt-24 pb-14">
         <Eyebrow text="Our Work" />
@@ -108,13 +108,13 @@ export default function WorkPage() {
       <div className="px-6 md:px-16 lg:px-24 py-16 flex items-center gap-6">
         <hr className="flex-1 border-border" />
         <a
-          href="#contact"
+          href="/contact"
           className="text-[11px] font-medium tracking-[2px] uppercase text-copper hover:text-linen transition-colors whitespace-nowrap"
         >
           View All Case Studies
         </a>
         <hr className="flex-1 border-border" />
       </div>
-    </main>
+    </div>
   )
 }

@@ -7,5 +7,6 @@ export async function submitContact(data: ContactFormData) {
   if (!result.success) {
     return { success: false as const, error: 'Invalid form data' }
   }
+  // v1 stub — wire up email/persistence layer before production use
   return { success: true as const }
 }

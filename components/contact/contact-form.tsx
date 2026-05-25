@@ -36,6 +36,7 @@ function formatBudget(value: number) {
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
   const {
     register,
@@ -55,9 +56,16 @@ export function ContactForm() {
   const budgetValue = watch('budget', 25000)
 
   async function onSubmit(data: ContactFormData) {
-    const result = await submitContact(data)
-    if (result.success) {
-      setSubmitted(true)
+    setSubmitError(null)
+    try {
+      const result = await submitContact(data)
+      if (result.success) {
+        setSubmitted(true)
+      } else {
+        setSubmitError('Something went wrong. Please try again.')
+      }
+    } catch {
+      setSubmitError('Failed to send. Please try again.')
     }
   }
 
@@ -275,6 +283,13 @@ export function ContactForm() {
           )}
         </div>
       </div>
+
+      {/* Submit error */}
+      {submitError && (
+        <p className="text-sm text-error" role="alert">
+          {submitError}
+        </p>
+      )}
 
       {/* Submit */}
       <button
