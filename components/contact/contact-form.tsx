@@ -10,10 +10,10 @@ import { submitContact } from '@/app/actions/contact'
 const PROJECT_TYPES = [
   'Web App',
   'Mobile App',
-  'E-commerce',
-  'Branding',
-  'API / Backend',
-  'Other',
+  'AI / Automation',
+  'Design System',
+  'Strategy Only',
+  'Not Sure Yet',
 ]
 
 const TIMELINES = [
@@ -101,7 +101,7 @@ export function ContactForm() {
               {...register('name')}
             />
             {errors.name && (
-              <p className="text-sm text-error">{errors.name.message}</p>
+              <p role="alert" className="text-sm text-error">{errors.name.message}</p>
             )}
           </div>
 
@@ -134,7 +134,7 @@ export function ContactForm() {
               {...register('email')}
             />
             {errors.email && (
-              <p className="text-sm text-error">{errors.email.message}</p>
+              <p role="alert" className="text-sm text-error">{errors.email.message}</p>
             )}
           </div>
 
@@ -198,7 +198,7 @@ export function ContactForm() {
             )}
           />
           {errors.projectTypes && (
-            <p className="text-sm text-error">{errors.projectTypes.message}</p>
+            <p role="alert" className="text-sm text-error">{errors.projectTypes.message}</p>
           )}
         </div>
 
@@ -220,6 +220,9 @@ export function ContactForm() {
                 step={1000}
                 value={field.value}
                 onChange={(e) => field.onChange(Number(e.target.value))}
+                aria-valuemin={BUDGET_MIN}
+                aria-valuemax={BUDGET_MAX}
+                aria-valuenow={field.value}
                 className="w-full accent-copper"
               />
             )}
@@ -268,7 +271,7 @@ export function ContactForm() {
             {...register('message')}
           />
           {errors.message && (
-            <p className="text-sm text-error">{errors.message.message}</p>
+            <p role="alert" className="text-sm text-error">{errors.message.message}</p>
           )}
         </div>
       </div>
