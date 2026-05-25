@@ -2,7 +2,7 @@
 
 A premium marketing and lead-generation website for a full-service software agency. Built with a "craft-first" editorial aesthetic — Playfair Display serif typography against deep forest green, copper accents, and warm linen tones.
 
-**Live demo:** https://atelier-studio-carlomigueldy.vercel.app
+**Live demo:** https://haiku-app-three.vercel.app
 
 ---
 
